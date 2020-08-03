@@ -1,0 +1,11 @@
+@import '../../../variables';
+
+.input-normal {
+  width: 100%;
+  border: 1px solid $darker-border-color;
+}
+
+.input-error {
+  width: 100%;
+  border: 1px solid $error-color;
+}

@@ -1,0 +1,33 @@
+$border-color: #e3e6f0;
+$header-color: #5f667d;
+$alternating-color: #f9faff;
+$important-text-color: #386ce6;
+$hover-color: #cfd3e1;
+$darker-border-color: #cdd2e0;
+$error-color: #f3376b;
+
+@mixin chkbox-column {
+  width: 36px;
+  text-align: center;
+}
+
+@mixin arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+@mixin arrow-down {
+  @include arrow;
+  border-top: 7px solid $header-color;
+}
+
+@mixin arrow-up {
+  @include arrow;
+  border-bottom: 7px solid $header-color;
+}
+
+@mixin rounded-corners {
+  border-radius: .3em;
+}

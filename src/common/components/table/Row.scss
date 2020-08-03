@@ -1,0 +1,76 @@
+@import '../../../variables.scss';
+
+.table-row, .table-row-selected {
+  @include chkbox-column;
+  border-bottom: 1px solid $border-color;
+  height: 46px;
+  justify-content: center;
+  line-height: 1.5em;
+  td {
+    text-align: left;
+    vertical-align: inherit;
+  }
+
+  td:first-child {
+    @include chkbox-column;
+  }
+  td:nth-child(2) {
+    color: $important-text-color;
+    font-weight: 500;
+  }
+  td:nth-last-child(2) {
+    text-align: center;
+  }
+  td:last-child {
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        flex-grow: 1;
+      }
+      .ctrl-btn-wrap {
+        display: flex;
+        user-select: none;
+        cursor: pointer;
+        margin-right: 12px;
+        border: 1px solid $darker-border-color;
+        border-radius: .3em;
+        box-sizing: border-box;
+        text-decoration:none;
+        text-align:center;
+        font-weight: 500;
+        transition: all 0.2s;
+        background-color: white;
+
+        .inner-txt-before {
+          padding: 4px 10px 4px 10px;
+          border-right: 1px solid $darker-border-color;
+        }
+        span {
+          align-self: center;
+          margin: 5px;
+          @include arrow-down;
+        }
+      }
+    }
+  }
+}
+
+.circle-initials {
+  display:inline-block;
+  font-size: 14px;
+  padding: 4px;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+  text-align:center;
+  border-radius:50%;
+  background:#eae0fd;
+  vertical-align: middle;
+  margin-right:12px;
+  color:#1e2029;
+}
+
+.table-row-selected {
+  background-color: $alternating-color;
+}

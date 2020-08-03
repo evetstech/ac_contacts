@@ -1,0 +1,58 @@
+@import '../../../variables.scss';
+
+.header-row {
+  height: 28px;
+  border-bottom: 1px solid $border-color;
+  th {
+    text-align: left;
+    vertical-align: inherit;
+    font-weight: default;
+    color: $header-color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  th:first-child {
+    @include chkbox-column;
+  }
+
+  th:not(:first-child) {
+    width: 15%;
+  }
+  th:nth-child(2) {
+    width: 23%;
+
+    div {
+      display: flex;
+    }
+  }
+  th:nth-last-child(2) {
+    text-align: center;
+  }
+  th:last-child {
+    width: 33%;
+    cursor: auto;
+
+    span {
+      float: right;
+      color: black;
+      margin-right: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+@mixin arrow-alignment {
+  align-self: center;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+.arrow-up {
+  @include arrow-up;
+  @include arrow-alignment;
+}
+
+.arrow-down {
+  @include arrow-down;
+  @include arrow-alignment;
+}

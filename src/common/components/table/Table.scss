@@ -1,0 +1,13 @@
+@import '../../../variables.scss';
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid $border-color;
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.thead {
+  height: 28px;
+}

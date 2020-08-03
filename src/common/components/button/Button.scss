@@ -1,0 +1,33 @@
+@import '../../../variables';
+.btn {
+  @include rounded-corners;
+  width: 7vw;
+  min-width: 46px;
+  height: 36px;
+  min-height: 32px;
+  background-color: $important-text-color;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  user-select: none;
+
+  span {
+    box-sizing: border-box;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-top: 2px solid white;
+    border-right: 2px solid transparent;
+    animation: spinner .6s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
